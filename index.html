@@ -2,17 +2,60 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>我的 GitHub 主页</title>
+  <title>张涛 - 个人主页</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 50px;
-      background-color: #f9f9f9;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f7fa;
       color: #333;
+      line-height: 1.6;
     }
-    h1 {
+    header {
+      background: linear-gradient(120deg, #007acc, #00c6ff);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    header p {
+      margin: 8px 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
       color: #007acc;
+      border-left: 5px solid #007acc;
+      padding-left: 10px;
+      margin-top: 40px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .columns {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .column {
+      flex: 1;
+      min-width: 300px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
     }
     a {
       color: #007acc;
@@ -21,17 +64,88 @@
     a:hover {
       text-decoration: underline;
     }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #007acc;
+      color: white;
+      border-radius: 0 0 12px 12px;
+    }
   </style>
 </head>
 <body>
-  <h1>你好，我是 [你的名字]</h1>
-  <p>欢迎来到我的 GitHub 主页！</p>
-  <p>这里是我的一些项目：</p>
-  <ul style="list-style: none; padding: 0;">
-    <li><a href="https://github.com/你的用户名/项目1">项目 1</a></li>
-    <li><a href="https://github.com/你的用户名/项目2">项目 2</a></li>
-    <li><a href="https://github.com/你的用户名/项目3">项目 3</a></li>
-  </ul>
-  <p>📫 联系我：<a href="mailto:你的邮箱@example.com">你的邮箱@example.com</a></p>
+
+  <header>
+    <h1>张涛</h1>
+    <p>天津工业大学 · 硕士二年级</p>
+    <p>📞 17661256505 | 📧 <a href="mailto:zhangtao@tiangong.edu.cn" style="color:white;">zhangtao@tiangong.edu.cn</a></p>
+  </header>
+
+  <div class="container">
+    
+    <div class="section">
+      <h2>研究方向</h2>
+      <p>人工智能 · 图像处理与识别 · 物联网技术 · 张量计算 · 凸优化 · 多模态学习 · 生物医学信号处理</p>
+    </div>
+
+    <div class="section">
+      <h2>教育背景</h2>
+      <div class="columns">
+        <div class="column">
+          <h3>山东理工大学</h3>
+          <p>通信工程，本科 (2019.09 - 2023.06)</p>
+          <p>主修课程：信号与系统(92.5)、数字电路与HDL设计(92.2)、通信原理(94.5)、高数(92.8)</p>
+        </div>
+        <div class="column">
+          <h3>天津工业大学</h3>
+          <p>新一代电子信息技术，硕士 (2023.09 - 至今)</p>
+          <p>成绩排名：研二 1/177，国家奖学金，校级三好学生</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>学术成果</h2>
+      <h3>期刊文章</h3>
+      <ul>
+        <li>IEEE TIM: Low-Rank and Sparse Tensor Decomposition, 2025</li>
+        <li>Measurement: BiStreamNet CNN-Transformer, 接收</li>
+        <li>IEEE SPL: Diffusion Model for EIT Reconstruction, 2025</li>
+        <li>其他 SCI/EI 论文多篇（一区/二区/三区）</li>
+      </ul>
+      <h3>会议文章</h3>
+      <ul>
+        <li>Best Student Paper Award - International Conference on IPNP, 2025</li>
+        <li>IEEE I2MTC, 2024</li>
+        <li>IEEE BMSB, 2024</li>
+      </ul>
+      <h3>专利</h3>
+      <ul>
+        <li>授权发明专利：一种电阻抗图像重建方法，2025</li>
+        <li>受理发明专利：空间-小波双域驱动的复数电阻抗图像重建方法，2025</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>项目经历</h2>
+      <ul>
+        <li><b>可穿戴式 EIT 手势识别系统</b> (2024.03 – 2024.08)  
+          创新电极设计 + CNN 深度学习，实时识别 5 种手势。</li>
+        <li><b>改进8电极EIT测量设备</b> (2024.09 – 2025.02)  
+          自研设备，测量速度提升至毫秒级，支持多频测量。</li>
+        <li><b>Text2SQL 主动提示系统</b> (2024.01 – 2024.06)  
+          基于 LLaMA-2 提升自然语言转 SQL 准确率。</li>
+        <li><b>模块化核工程项目造价估算平台</b> (2025.01 – 至今)  
+          集成 AI 算法 + DeepSeek-R1 模型，偏差小于 5%。</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 张涛 | GitHub Pages 个人主页
+  </footer>
+
 </body>
 </html>
